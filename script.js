@@ -260,28 +260,24 @@ for (let i = 1; i <= 10; i++) {
 
 ///////////////12//////////////////
 
-// Função para cadastrar produtos
 function cadastrarProdutos() {
-    const produtos = []; // Array para armazenar os produtos
-    let totalCarrinho = 0; // Variável para armazenar o valor total do carrinho
+    const produtos = []; 
+    let totalCarrinho = 0; 
 
 
     for (let i = 0; i < 5; i++) {
         const nome = prompt(`Informe o nome do produto ${i + 1}:`);
         const preco = parseFloat(prompt(`Informe o preço do produto ${i + 1}:`));
 
-        // Criação de um objeto para o produto
         const produto = {
             nome: nome,
             preco: preco
         };
 
-        // Adiciona o produto ao array
         produtos.push(produto);
-        totalCarrinho += preco; // Adiciona o preço ao total do carrinho
+        totalCarrinho += preco; 
     }
 
-    // Exibe a lista de produtos e o valor total
     console.log("Lista de Produtos:");
     produtos.forEach(produto => {
         console.log(`Produto: ${produto.nome}, Preço: R$ ${produto.preco.toFixed(2)}`);
@@ -290,5 +286,4 @@ function cadastrarProdutos() {
     console.log(`Valor total do carrinho: R$ ${totalCarrinho.toFixed(2)}`);
 }
 
-// Chama a função para cadastrar produtos
 cadastrarProdutos();
